@@ -4,6 +4,11 @@ compatibility_flags = ["nodejs_compat"]
 main = "./cloudflare-worker.ts"
 minify = true
 
+# 自定义域名（部署时自动建 DNS + 证书）
+routes = [
+  { pattern = "video.yxdcyx.dpdns.org", custom_domain = true }
+]
+
 # 静态资源配置
 # Cloudflare Workers Assets 用于服务静态文件
 [assets]
